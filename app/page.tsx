@@ -4,7 +4,7 @@ import React from 'react';
 export default function Home() {
   const params = new URLSearchParams({
     client_id: process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID!,
-    redirect_uri: process.env.NEXT_PUBLIC_DEV_REDIRECT!,
+    redirect_uri: process.env.NEXT_PUBLIC_DEV_REDIRECT! ?? 'http://localhost:3000/callback',
     scope: process.env.NEXT_PUBLIC_GITHUB_SCOPE!,
   });
 
